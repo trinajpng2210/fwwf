@@ -1,0 +1,420 @@
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+body {
+  margin: 0;
+  color: #6F6F6F;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  line-height: 34px;
+}
+
+body>.wrap {
+  height: auto;
+  min-height: 100%;
+}
+
+#main-header {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+}
+
+.topstrip {
+  width: 100%;
+  margin: 5px;
+}
+
+.topstrip .inner {
+  width: 100%;
+  padding: 15px;
+  margin: auto;
+  color: #333;
+  font-family: erba, futura, sans-serif; /*How to get new fonts?*/
+  font-size: 14px;
+  line-height: 34px;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  display: block;
+}
+
+.logo-select {
+  width: 300px;
+  display: inline-block;
+  float: left;
+}
+
+.signup-form {
+  width: 25%; 
+  float: right;
+  padding-right: 15px;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.emailForm input {
+  font-size: 1em;
+  padding: 3px;
+  margin-right: 4px;
+}
+
+.emailForm-submit  {
+  font-size: 1em;
+}
+
+.button-container:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+form {
+  display: block;
+  white-space: normal;
+  font-family: erba, futura, sans-serif;
+}
+
+form input {
+  font-family: erba, futura, sans-serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+  font-size: 1em;
+  font-family: futura, helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#main-content {
+  padding: 60px 0 0;
+  text-align: center;
+}
+
+#california-photo {
+  background:url(../FWWF_Santa-Monica_August2013_H678.jpg) bottom center no-repeat;
+  background-size: 100%;
+  height: 678px;
+}
+
+#main-content .container {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#main-content .box {
+  width: 100%;
+  height: 100%;
+  display: table;
+  vertical-align: middle;
+  table-layout: fixed;
+  padding: 110px 0 245px 0;
+}
+
+.center-column {
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.center-column-row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.screen-large {
+  color: rgb(51, 51, 51);
+  font-weight: 600;
+  line-height: 1;
+  margin: 0 0 0.2em;
+}
+
+.scrollbar1 {
+  height: 60px;
+  width: 100%;
+  background-color: rgb(51, 51, 51);
+}
+
+#section-coffee {
+  height: 550px;
+  width: 100%;
+}
+
+.scrollimage {
+  /*background: url(../FWWF_Bronte_December2013_Beach_H678-2.jpg) bottom center no-repeat;*/
+  width: 100%;
+  height: 178px;
+  background-color: white;
+}
+
+#section-conclusion {
+  background: url(../FWWF_Bronte_December2013_Beach_H678-2.jpg) bottom center no-repeat;
+}
+
+#section-conclusion h1 {
+  color: black;
+}
+
+#section-conclusion a {
+  padding-right: 5px;
+  color: black;
+}
+
+.footer-1 {
+  border-top: 1px solid #c8c8ca;
+  border-bottom: 1px solid #c8c8ca;
+  height: 45px;
+  width: 100%;
+  text-transform: uppercase;
+  margin: 2px 0;
+  padding: 4px;
+}
+
+.footer-1 a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-1-col-1 {
+  float: left;
+  width: 20%;
+  padding: 4px 4px 4px 10px;
+}
+
+.footer-1-col-2 {
+  float: left;
+  width: 20%;
+  padding: 4px;
+}
+
+.footer-1-col-3 {
+  float: left;
+  width: 20%;
+  padding: 4px;
+}
+
+.footer-1-col-4 {
+  float: left;
+  width: 20%;
+  padding: 4px;
+}
+
+.footer-1-col-5 {
+  float: left;
+  width: 20%;
+  padding: 4px;
+}
+
+.content-wrapper:before {
+  content: " ";
+  display: table;
+}
+
+.main-image-container {
+  width: 100%;
+  max-height: 668px;
+  overflow: hidden;
+  margin: 0;
+  background-color: white;
+  position: relative;
+  /*background-image: url(2014_WCBC_.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;*/
+}
+
+.content-wrapper img {
+  z-index: 1;
+  width: 100%;
+  max-height: 668px;
+}
+
+.article-tiles {
+  padding-top: 15px;
+  width: 100%;
+  position: relative;
+}
+
+.tile-col-surf {
+  float: left;
+  width: 25%;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  height: 350px;
+  background-color: #fff;
+  padding: 4px;
+}
+
+.box-shadow {
+  float: left;
+  background-color: #fff;
+  -moz-box-shadow: -3px 3px 5px #ececec;
+  -webkit-box-shadow: -3px 3px 5px #ececec;
+  box-shadow: -3px 3px 5px #ececec;
+  padding: 10px 0;
+  width: 25%;
+}
+
+p {
+  display: block;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.p-type {
+  text-transform: uppercase;
+  font-size: 0.6em;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  color: #c12020;
+  font-family: Avenir;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.p-title, .p-title a {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-family: Futura;
+  font-weight: 500;
+  color: rgb(51, 51, 51);
+}
+
+.p-blurb {
+  font-size: 0.8em;
+}
+
+.copyright {
+  float: left;
+  width: 33%;
+  font-size: 0.8em;
+}
+
+.footer-2 {
+  padding: 20px;
+}
+
+.footer-2-text {
+  float: left;
+  width: 33%;
+  font-size: 0.8em;
+}
+
+.photography-credit {
+  float: right;
+  width: 33%;
+  text-align: right;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+iframe { 
+  margin: 0 auto; 
+  display: block;
+}
+
+@media (min-width: 1200px)
+.container {
+  width: 1170px;
+}
+
+@media (min-width: 992px)
+.container {
+  width: 970px;
+}
+
+.col-md-8 {
+  margin-left: 66.6666667%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-md-offset-2 {
+  margin-left: 16.6666667%;
+}
+
+@media (min-width: 768px)
+.container {
+  width: 750px;
+}
+
+@media screen and (min-width: 992px)
+.screen-large {
+  font-size: 70px;
+}
+
+@media screen and (min-width: 768px)
+.screen-large {
+  font-size: 70px;
+}
+
+.lead {
+  font-weight: 200;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+  font-size: 24px;
+  margin-bottom: 1em;
+}
+
+/*fwwf-coffee-css*/
+
+#coffee-content {
+  position: relative;
+}
+
+#coffee-content, #surf-content {
+  background-color: #f4f4f4;
+  padding: 0 20px;
+  height: 1000px;
+}
+
+#coffee-content .coffee-container, #surf-content .surf-container {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  top: 73px;
+}
+
+.coffee-tile, .surf-tile {
+  float: left;
+  width: 29%; /*Should use pixels with breakpoints*/
+  margin-right: 40px;
+  margin-bottom: 80px;
+  height: 200px;
+  background-color: #c8c8ca;
+}
+
+.coffee-tile img, .surf-tile img {
+  height: 120px;
+  width: 100%;
+}
+
+.column-box {
+  background-color: white;
+}
+
