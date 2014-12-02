@@ -59,6 +59,7 @@ body>.wrap {
   width: 300px;
   display: inline-block;
   float: left;
+  padding-left: 15px;
 }
 
 .signup-form {
@@ -113,10 +114,10 @@ a {
 #california-photo {
   background:url(../FWWF_Santa-Monica_August2013_H678.jpg) bottom center no-repeat;
   background-size: 100%;
-  height: 678px;
+  height: 978px;
 }
 
-#main-content .container {
+.container {
   height: 100%;
   display: block;
   margin: 0 auto;
@@ -125,7 +126,7 @@ a {
   padding-right: 15px;
 }
 
-#main-content .box {
+.box {
   width: 100%;
   height: 100%;
   display: table;
@@ -140,51 +141,111 @@ a {
   vertical-align: middle;
 }
 
-.center-column-row {
+.row {
   margin-left: -15px;
   margin-right: -15px;
 }
 
-.screen-large {
+.col-md-8 {
+  position: relative;
+  top: -30px;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#california-photo h1 {
+  display: block;
   color: rgb(51, 51, 51);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1;
+  text-align: center;
+  margin: 0 0 0.5em;
+  font-size: 48px;
+}
+
+#california-photo p {
+  color: rgb(51, 51, 51);
+  font-weight: 300;
+  /*line-height: 1;*/
+  text-align: center;
   margin: 0 0 0.2em;
+  font-size: 30px;
+}
+
+#main-surf {
+  color: rgb(51, 51, 51);
+  font-size: 24px;
 }
 
 .scrollbar1 {
-  height: 60px;
+  height: 180px;
   width: 100%;
-  background-color: rgb(51, 51, 51);
+  background-color: #fff;
+}
+
+.scrollbar2 {
+  height: 200px;
+  width: 100%;
+  background-color: #fff;
 }
 
 #section-coffee {
-  height: 550px;
-  width: 100%;
+  background:url(../FWWF_LA_Aug2013_Coffee_W1680.jpg) bottom center no-repeat;
+  background-size: 100%;
+  height: 878px;
 }
 
-.scrollimage {
-  /*background: url(../FWWF_Bronte_December2013_Beach_H678-2.jpg) bottom center no-repeat;*/
-  width: 100%;
-  height: 178px;
-  background-color: white;
+.col-md-8-coffee {
+  top: 30;
+  padding-left: 900px;
+  padding-right: 0;
+  color: #fff;
+}
+
+.col-md-8-coffee h1 {
+  display: block;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  margin: 0 0 0.5em;
+  font-size: 36px;
+}
+
+.col-md-8-coffee p {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.col-md-8-coffee a {
+  color: #fff;
+  font-size: 20px;
 }
 
 #section-conclusion {
-  background: url(../FWWF_Bronte_December2013_Beach_H678-2.jpg) bottom center no-repeat;
+  background: url(../FWWF_Bronte_Dec2013_1740x600.jpg) bottom center no-repeat;
+  background-size: 100%;
+  height: 640px;
 }
 
 #section-conclusion h1 {
   color: black;
+  float: left;
+  padding-left: 100px;
+  padding-top: 260px;
 }
 
 #section-conclusion a {
   padding-right: 5px;
   color: black;
+  float: left;
+  padding-left: 120px;
+  padding-top: 280px;
 }
 
 .footer-1 {
-  border-top: 1px solid #c8c8ca;
   border-bottom: 1px solid #c8c8ca;
   height: 45px;
   width: 100%;
@@ -306,20 +367,22 @@ p {
   font-size: 0.8em;
 }
 
+.footer-2 {
+  padding: 20px;
+}
+
 .copyright {
   float: left;
   width: 33%;
-  font-size: 0.8em;
-}
-
-.footer-2 {
-  padding: 20px;
+  font-size: 1em;
+  padding-left: 15px;
 }
 
 .footer-2-text {
   float: left;
   width: 33%;
-  font-size: 0.8em;
+  font-size: 1em;
+  text-align: center;
 }
 
 .photography-credit {
@@ -328,6 +391,7 @@ p {
   text-align: right;
   font-size: 0.8em;
   text-transform: uppercase;
+  padding-right: 15px;
 }
 
 iframe { 
@@ -344,16 +408,12 @@ iframe {
 .container {
   width: 970px;
 }
-
+@media (min-width: 992px)
 .col-md-8 {
   margin-left: 66.6666667%;
   float: left;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
-
+@media (min-width: 992px)
 .col-md-offset-2 {
   margin-left: 16.6666667%;
 }
@@ -364,13 +424,13 @@ iframe {
 }
 
 @media screen and (min-width: 992px)
-.screen-large {
+h1.screen-large {
   font-size: 70px;
 }
 
 @media screen and (min-width: 768px)
-.screen-large {
-  font-size: 70px;
+h1.screen-large {
+  font-size: 64px;
 }
 
 .lead {
@@ -383,38 +443,336 @@ iframe {
 
 /*fwwf-coffee-css*/
 
-#coffee-content {
+div#coffee-content, div#surf-content {
   position: relative;
+  top: 100px;
 }
 
-#coffee-content, #surf-content {
-  background-color: #f4f4f4;
-  padding: 0 20px;
-  height: 1000px;
+/*#coffee-content-filters {
+  width: 30%;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  float: left;
+  background-color: #c8c8ca;
+  margin: 15px;
+}*/
+
+/*#coffee-content-filters ul li {
+  list-style: none;
+}*/
+
+/*#coffee-content-two-thirds {
+  width: 67%;
+  float: left;
+}*/
+
+div#coffee-box-1 {
+  float: left;
+  width: 100%;
+  background: url(../content_images/FWWF_Sydney_Dec2013_Room10Cafe_1390x500.jpg) bottom center no-repeat;
+  height: 480px;
 }
 
-#coffee-content .coffee-container, #surf-content .surf-container {
-  margin: 0 auto;
+div#coffee-box-2 {
+  float: left;
+  width: 100%;
+  background: url(../content_images/FWWF_Sydney_Dec2013_ParamountCafe_1390x500.jpg) bottom center no-repeat;
+  height: 480px;
+}
+
+div#coffee-box-3 {
+  float: left;
+  width: 100%;
+  background: url(../content_images/FWWF_Sydney_Dec2013_VietnameseCafe_1390x500.jpg) bottom center no-repeat;
+  height: 480px;  
+}
+
+div#coffee-box-4 {
+  float: left;
+  width: 100%;
+  background: url(../content_images/FWWF_NY_Aug2013_AndazCafe_1390x500.jpg) bottom center no-repeat;
+  height: 480px;
+}
+
+div#coffee-box-5 {
+  float: left;
+  width: 100%;
+  background: url(../content_images/FWWF_TheHague_Dec2013_ClarenceCafe_1390x500.jpg) bottom center no-repeat;
+  height: 480px;
+}
+
+div#coffee-box-6 {
+  float: left;
+  width: 100%;
+  background: url(../content_images/FWWF_Sydney_Dec2013_GroundsCafe_1390x500.jpg) bottom center no-repeat;
+  height: 480px;
+}
+
+div#coffee-box-7 {
+  float: left;
+  width: 100%;
+  background: url(../content_images/FWWF_Sydney_Dec2013_VietnameseCafe_1390x500.jpg) bottom center no-repeat;
+  height: 480px;
+}
+
+div.coffee-content-box-text, div.surf-content-box-text {
+  float: right;
+  width: 30%;
+  margin: 20px;
+  background: #c8c8ca;
+  opacity: 0.7;
+}
+
+div#surf-box-1 {
+  float: left;
+  width: 100%;
+  background: url(../content_images/FWWF_SB_Aug2013_Beach_1390x500-2.jpg) bottom center no-repeat;
+  height: 480px;
+}
+
+div#surf-box-2 {
+  float: left;
+  width: 100%;
+  background: url(../content_images/FWWF_SM_Aug2013_Beach_1390x500-2.jpg) bottom center no-repeat;
+  height: 480px;
+}
+
+div#surf-box-3 {
+  float: left;
+  width: 100%;
+  background: url(../content_images/FWWF_Vancouver_Aug2013_Beach_1390x500-2.jpg) bottom center no-repeat;
+  height: 480px;  
+}
+
+div#surf-box-4 {
+  float: left;
+  width: 100%;
+  background: url(../content_images/FWWF_SB_Aug2013_Beach_1390x500-2.jpg) bottom center no-repeat;
+  height: 480px;
+}
+
+div#surf-box-5 {
+  float: left;
+  width: 100%;
+  background: url(../content_images/FWWF_OC_Aug2013_Beach_1390x500.jpg) bottom center no-repeat;
+  height: 480px;
+}
+
+div#surf-box-6 {
+  float: left;
+  width: 100%;
+  background: url(../content_images/FWWF_Bronte_Dec2013_Surf_1390x500.jpg) bottom center no-repeat;
+  height: 480px;
+}
+
+div#surf-box-7 {
+  float: left;
+  width: 100%;
+  background: url(../content_images/FWWF_Sydney_Dec2013_VietnameseCafe_1390x500.jpg) bottom center no-repeat;
+  height: 480px;
+}
+
+#coffee-content .coffee-container {
+  top: 100px;
   width: 100%;
   height: 100%;
-  top: 73px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
-.coffee-tile, .surf-tile {
+.coffee-content-col-1 {
+  width: 700px;
+  padding: 10px;
+  height: 100%;
+  float: left;
+}
+
+.coffee-content-col-2 {
+  width: 3000px;
+  padding: 10px;
+  height: 100%;
+  float: left;
+}
+
+#coffee-content .col-fullwidth {
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+  float: left;
+}
+
+#coffee-content .col-halfwidth {
+  width: 50%;
+  padding: 10px;
+  margin-right: 10px;
+  height: 100%;
+  float: left;
+}
+
+.coffee-tile-horizontal img {
+  max-width: 50%;
+  float: left;
+}
+
+.coffee-tile-vertical img {
+  max-height: 50%;
+  float: left;
+}
+
+.coffee-tile {
   float: left;
   width: 29%; /*Should use pixels with breakpoints*/
   margin-right: 40px;
   margin-bottom: 80px;
-  height: 200px;
-  background-color: #c8c8ca;
+  background-color: #fff;
+}
+
+.coffee-tile-2 {
+  float: left;
+  width: 29%;
+  height: 678px;
+  margin-right: 40px;
+  margin-bottom: 80px;
+  background: url('../FWWF_LA_August2013_Cafe_H678.jpg') bottom center no-repeat;
+}
+
+.coffee-tile-2 p {
+  vertical-align: bottom;
 }
 
 .coffee-tile img, .surf-tile img {
-  height: 120px;
-  width: 100%;
+  max-height: 100%;
+  max-width: 50%;
 }
 
 .column-box {
   background-color: white;
+  height: 100px;
+}
+
+#surf-content .surf-container {
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.surf-column-left {
+  width: 800px;
+  float: left;
+  height: 100%;
+}
+
+.surf-column-right {
+  width: 450px;
+  float: left;
+  height: 100%;
+}
+
+.surf-tile-vertical-tile {
+  width: 45%;
+  margin-right: 40px;
+  margin-bottom: 80px;
+  float: left;
+}
+
+#scroller {
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#scroller .innerScrollArea {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-x: auto;
+}
+
+#scroller .innerScrollArea ul {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  list-style-type: none;
+}
+
+#scroller .innerScrollArea li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position: absolute;
+}
+
+#instagram-gallery {
+  position: relative;
+  padding-top: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 100%;
+}
+
+#instagram-gallery img {
+  padding: 5px;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+#instagram-gallery img:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+h1.instagram-title {
+  color: rgb(51, 51, 51);
+  text-align: center;
+}
+
+h4.instagram-tag {
+  color: rgb(51, 51, 51);
+  text-align: center;
+}
+
+div.scroll-clip {
+  width: 100%;
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+}
+
+#instagram_list {
+  margin: 0 auto;
+  width: 800px;
+  border: 1px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  text-align: center;  
+  /*width: 4400px;
+  height: 280px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+  position: relative;*/
+}
+
+#instagram_list img {
+  border: 10px solid #444;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 10px;
+  margin: 15px;
+}
+
+#instagram_list img:hover {
+  border-color: #555;
+  -moz-box-shadow: 0px 0px 15px #111;
+  -webkit-box-shadow: 0px 0px 15px #111;
 }
 

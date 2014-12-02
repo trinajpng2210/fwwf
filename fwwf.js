@@ -1,87 +1,50 @@
+var emailAddress;
+var api_data;
+
 $(document).ready(function() {
 
-//Topmenu nav
-  $('.nav-topmenu-col-1 a').on('mouseenter', function() { 
-    $('.has-dropdown-col-1').slideDown(); 
-  });
-  $('.nav-topmenu-col-1 a').on('mouseleave', function() { 
-    $('.has-dropdown-col-1').slideUp(); 
-  });
-  $('.nav-topmenu-col-2 a').on('mouseenter', function() { 
-    $('.has-dropdown-col-2').slideDown(); 
-  });
-  $('.nav-topmenu-col-2 a').on('mouseleave', function() { 
-    $('.has-dropdown-col-2').slideUp(); 
-  });
-  $('.nav-topmenu-col-3 a').on('mouseenter', function() { 
-    $('.has-dropdown-col-3').slideDown(); 
-  });
-  $('.nav-topmenu-col-3 a').on('mouseleave', function() { 
-    $('.has-dropdown-col-3').slideUp(); 
-  });
-  $('.nav-topmenu-col-4 a').on('mouseenter', function() { 
-    $('.has-dropdown-col-4').slideDown(); 
-  });
-  $('.nav-topmenu-col-4 a').on('mouseleave', function() { 
-    $('.has-dropdown-col-4').slideUp(); 
+  var image1 = $('#california-photo');
+  var image2 = $('#section-coffee');
+  var body = $('body')
+  $(document).scroll(function() {
+    var top1 = body.scrollTop() / 2;
+    var top2 = body.scrollTop() / 4;
+    image1.css('transform', 'translate(0, ' + top1 + 'px)');
+    image2.css('transform', 'translate(0, ' + top2 + 'px)');
+    if(top1 > 70) {
+      image1.css('opacity', (280-top1)/100);
+    }
+    if(top2 > 20) {
+      image2.css('opacity', (380-top2)/100);
+    }
   });
 
-  //Main image.
+  $.ajax({
+    type: 'GET',
+    dataType: 'jsonp',
+    url: 'https://api.instagram.com/v1/tags/westcoastbestcoast/media/recent?callback=?&count=36&access_token=419417011.cfa3287.2fd7043455f143dab131afb7fb6ce35e',
+    success: function(response) {
+      api_data = response,
+      console.log(response)
+    //   for (var i = 0; i < 36; i++) {
+    //     $('#instafeed ul').append('<li><a target="_blank" href="' + response.data[i].link + '"><img scr="' + response.data[i].images.standard_resolution.url + '"></img></a></li>'),
+    //   }
+    }
+  });
 
-  // var image = $(".content-wrapper img");
-  // var body = $("body")
-  // $(document).scroll(function() {
-  //   var top = body.scrollTop() / 2;
-  //   image.css('transform', 'translate(0, ' + top + 'px)');
-  //   if(top > 70) {
-  //     image.css('opacity', (170-top)/100);
-  //   }
-  // });
+  // Email form
+  var firebaseEmailAddresses = new Firebase('https://fewd-dev.firebaseio-demo.com/emailaddresses');
+  emailAddresses.on('child_added', function(snapshot) {
+    var emailAddress = snapshot.val();
+    console.log(emailAddress);
+  });
 
-  //Signup submit.
-
-  
-
+  $('.emailForm').submit(function() {
+    var newEmailAddress = $('.newEmailAddress').val();
+    var addedEmailAddress = { text: newEmailAddress };
+    firebaseEmailAddresses.push(addedEmailAddress);
+    $('.newEmailAddress').val("");
+    return false;
+  });
 
 });
-
-
-
-  //Instagram integration.
-  // var tag = "wcbc";
-  // var count = 10;
-  // var access_token = "22033045.ea9028a.eec94286a2e049429fe51c3fbc95db20";
-  // var access_parameters = {access_token: access_token};
-
-
-//   function grabImages(access_parameters) {
-//     var instagramUrl = "https://api.instagram.com/v1/tags/" + 
-//       tag + 
-//       "/media/recent?callback=?&count=" + 
-//       count;
-//     $.getJSON(instagramUrl, access_parameters, onDataLoaded);
-//   }
-
-//   // function onDataLoaded(instagram_data) {
-//   //   if (instagram_data.meta.code == 200) {
-//   //     var photos = instagram_data.data;
-//   //     if (photos.length > 0) {
-//   //       for (i = 0; i < photos.length; i++) {
-//   //         var photo = photos[key];
-//   //         $('#instagram-target').append('thumbnail_url');
-//   //       }
-//   //     }
-//   //     else {
-//   //       $('#instagram-target').append("No West Coast love to be found!");
-//   //     }
-//   //     else {
-//   //       var errorMessage = data.meta.error_message;
-//   //       $("#target").append("No West Coast love to be found. Instagram said: " + errorMessage);
-//   //     }
-//   //   }
-//   }
-
-//   // grabImages(access_parameters);
-
-  
-// });
