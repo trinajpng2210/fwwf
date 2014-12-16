@@ -6,7 +6,7 @@
     	<meta name="description" content="Your description goes here">
     	<meta name="keywords" content="one, two, three">
 	
-		<title>fwwf-homepage</title>
+		<title>fwwf-instagram</title>
 		
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
@@ -14,12 +14,13 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="fwwf.js"></script>
-    <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+		<script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+		<!-- <script src="css/instafeed.min.js"></script> -->
 	</head>
 
 	<body>
     <div class='wrap'>
-      <div id='main-header'>
+		  <div id='main-header'>
         <div class='clearfix topstrip'>
           <div class='logo-select'>
             <a href='fw+f-homepage.html'>Flat Whites + Fins | </a>
@@ -33,19 +34,18 @@
           </div>
         </div>
       </div>
-      <div class='main-content clearfix'>
-        <div id='personal-photo'>
-          <img src='./img/fw+f_personalPhoto.jpg' width='380' alt='Biographical Photo'>
-        </div>
-        <div id='personal-statement'>
-          <p>An Aussie now based in California, Trina found through photography a sense of adventure and freedom, and in photography a medium to tell stories.<br/>
-          <br/>
-          For that reason, Trina was drawn to <a href='fwwf-gallery.html'>lifestyle photography,</a> which she has kept up through her travels around the world and neighborhood meanderings.<br/>
-          <br/>
-          The name <strong>Flat Whites + Fins</strong> is an ode to her Aussie roots - excellent coffee &amp surf.
-          <a href=''>Contact Trina</a> at trina.jp.ng@gmail.com for consultations about images for your home, purchases or simply to say hi.</p>
-        </div>
-      </div>    
+      <div id='instagram-gallery'>
+    		<div id='instagram-gallery-title-area'>
+    			<h1 class='instagram-title'>Captured on mobile.</h1>
+    			<h4 class='instagram-tag'>Here, there, everywhere | @trinaOOO</h4>
+    		</div>
+  			<div id='instafeed' class='clearfix'>
+          <ul>
+				<!--Instagram pictures feed into this space.-->	
+  				</ul>
+  			</div>	
+    	</div>
+      
       <div class='footer-1'>
         <div class='footer-1-col-1'>
           <a href='fw+f-about.html'>About</a>
@@ -75,5 +75,5 @@
         </div>
       </div>
     </div>
-  </body>
+	</body>
 </html>
